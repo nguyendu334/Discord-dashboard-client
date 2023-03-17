@@ -1,0 +1,14 @@
+.container {
+    border: 1px solid #434343;
+    padding: 20px 32px;
+    margin: 10px 0px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img {
+    border-radius: 50%;
+}
