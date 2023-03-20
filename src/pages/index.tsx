@@ -8,8 +8,8 @@ export default function Home() {
     return (
         <div className="page aligned-center">
             <div>
-                <button className={styles.button}>
-                    <FaDiscord size={30} color="#7289DA" onClick={handleLogin} />
+                <button className={styles.button} onClick={handleLogin} >
+                    <FaDiscord size={30} color="#7289DA"/>
                     <span>Login with Discord</span>
                 </button>
             </div>

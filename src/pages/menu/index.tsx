@@ -8,7 +8,7 @@ type Props = {
     guilds: Guild[];
 };
 
-const MenuPage: NextPage<Props> = ({ guilds } : any ) => {
+const MenuPage: NextPage<Props> = ({ guilds } : any) => {
     return (
         <div className='page'>
             <div className={styles.container}>
