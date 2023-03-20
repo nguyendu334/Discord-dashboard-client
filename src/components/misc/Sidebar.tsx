@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import { MdSpaceDashboard } from 'react-icons/md';
 import { BsTerminal } from 'react-icons/bs';
@@ -6,6 +7,8 @@ import { RiLogoutCircleLine } from 'react-icons/ri';
 import { useRouter } from 'next/router';
 
 import styles from './index.module.scss';
+import { Guild } from '../../utils/types';
+import { getIcon } from '../../utils/helpers';
 
 const routes = [
     {
@@ -25,11 +28,15 @@ const routes = [
     },
 ];
 
-export const Sidebar = () => {
+type Props = {
+    guild?: Guild;
+};
+
+export const Sidebar:FC<Props> = ({ guild }) => {
     const router = useRouter();
     return (
         <div className={styles.sidebar}>
-            <Image src="/df.jpg" height={80} width={80} alt="guild avatar" className={styles.avatar} />
+            <Image src={getIcon(guild)} height={80} width={80} alt="guild avatar" className={styles.avatar} />
             <div className={styles.icons}>
                 {routes.map((route) => (
                     <div key={route.name} onClick={() => router.push(route.getPath(router.query?.id!.toString()))}>
